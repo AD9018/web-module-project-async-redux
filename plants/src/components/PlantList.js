@@ -12,16 +12,19 @@ const PlantList = (props) => {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
-
+  console.log(props);
   return (
     <StyledDiv className="plant-wrapper">
-      {props.isLoading ? <h3> Loading... </h3> : null}
-      {props.error ? <p style={{ color: "red" }}>{props.error}</p> : null}
-      {props.plants.map((plant) => (
-        <div className="Plant">
-          <Plant key={plant.name} plant={plant} />
-        </div>
-      ))}
+      {props.error && <p style={{ color: "red" }}>{props.error}</p>}
+      {props.isLoading ? (
+        <h3> Loading... </h3>
+      ) : (
+        props.plants.data.map((plant) => (
+          <div className="Plant">
+            <Plant key={plant.name} plant={plant} />
+          </div>
+        ))
+      )}
     </StyledDiv>
   );
 };

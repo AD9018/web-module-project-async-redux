@@ -6,11 +6,12 @@ import {
 
 const initialState = {
   isLoading: false,
-  plants: [],
+  plants: { data: [] },
   error: "",
 };
 
 export const reducer = (state = initialState, action) => {
+  console.log(action, action.payload);
   switch (action.type) {
     case FETCH_PLANT_START:
       return {

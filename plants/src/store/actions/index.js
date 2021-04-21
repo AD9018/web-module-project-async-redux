@@ -13,11 +13,12 @@ export const fetchData = () => {
         { headers: { "Access-Control-Allow-Origin": "https://trefle.io" } }
       )
       .then((res) => {
-        dispatch({ type: FETCH_PLANT_SUCCESS, payload: res.Data });
+        console.log("success!!!");
+        dispatch({ type: FETCH_PLANT_SUCCESS, payload: res.data });
       })
       .catch((err) => {
-        console.log(err);
-        dispatch({ type: FETCH_PLANT_FAILURE, payload: err });
+        console.log("FAIL");
+        dispatch({ type: FETCH_PLANT_FAILURE, payload: err.message });
       });
   };
 };
