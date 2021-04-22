@@ -4,21 +4,22 @@ const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 3px white solid;
-  width: 35%;
+  border: 3px gold solid;
+  width: 30%;
   font-size: 0.6em;
-  background-color: black;
-  margin-left: 32%;
-  color: white;
+  text-shadow: 10px 8px 8px;
+  margin-left: 34%;
+  margin-top: 1%;
+  color: gold;
   font-weight: bold;
   border-radius: 10%;
   padding: 0.5% 1% 0.5% 1%;
 
   img {
     width: 100%;
-    height: 60vh;
+    height: 55vh;
     border-radius: 10%;
-    border: 4px solid white;
+    border: 4px solid gold;
   }
 `;
 
